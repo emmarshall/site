@@ -1,0 +1,101 @@
+---
+pagetitle: "Emma Marshall"
+page-layout: custom
+css: index.css
+toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("functions.R")
+```
+
+::: vspace
+:::
+
+::: {.columns}
+
+::: {.column .col-v-center width="15%"} 
+:::
+
+::: {.column .col-v-center width="70%"}
+```{r}
+#| echo: false
+profile_circle_preview <- '
+<div class="p-3 text-center rounded-circle m-3 shadow-lg" style="background-size: cover; background-image: url({image}); width: 225px; height: 225px">
+<div class="visually-hidden">{alt}</div>
+</div>'
+profiles_cropped <- list(
+  image = "https://github.com/emmarshall/emmamarshall.com/raw/main/images/avatar.png",
+  alt = c(
+    "Picture of Emma Marshall"
+  )
+)
+
+profiles_cropped_html <- glue::glue_data(profiles_cropped, profile_circle_preview)
+profiles_cropped_html <- htmltools::HTML(profiles_cropped_html)
+```
+
+::: portrait
+`r profiles_cropped_html`
+:::
+
+
+# Emma Marshall JD, MA
+
+::: marshall-intro
+Graduate Student <br> Law-Psychology Program, [UNL](https://psychology.unl.edu/ebrank).
+:::
+
+::: about-link
+[MORE ABOUT ME](about/)
+:::
+
+:::
+:::
+
+::: {.column-screen .light-section}
+```{r}
+#| label: Row of links
+#| echo: false
+#| warning: false
+#| message: false
+content = rowwise_table(~name, ~icon, ~link,
+                        "Experience", "person-workspace", "about/about.html",
+    "Research", "clipboard-data", "conferences/index.html", 
+    "Projects", "card-checklist", "awards/index.html",
+    "Teaching", "mortarboard-fill", "teaching/judges/index.html"
+  
+)
+div(class = "bg-light",
+ div(class = "bg-breakout",
+    div(class = "inner-container",
+      div(class = "boxed-wrapper",
+            div(class = "boxed-feature-grid",
+          pmap(content, function(name, icon, link) {
+            div(class = "boxed-feature-grid__item",
+              div(class = "boxed-feature-grid__icon",
+                a(href = link, class = "boxed-feature-grid__link",
+                  tags$i(class = sprintf("bi-%s boxed-feature-grid__i bi-5x", icon))
+                )),
+    div(class = "boxed-feature-grid__title", name)
+)
+          })
+        )
+      )
+    )
+  )
+)
+
+```
+:::
+
+::: {.simple-info-blue .alt-background-blue}
+::: content-block-blue
+### Read about the new ap-ls.org website.
+
+[Learn More](posts/apls-website/index.html){.btn-action .btn .btn-secondary .btn-lg role="button"}
+:::
+:::
+
+[![Sample of projects and workshops I have contributed to.](images/hex_wall.png){fig-alt="Wall of hex stickers with images and text related to projects. Click to learn more." fig-align="center"}](projects/index.html)
