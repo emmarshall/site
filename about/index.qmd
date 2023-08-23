@@ -1,0 +1,84 @@
+---
+pagetitle: "about"
+about: 
+  id: hero-heading
+  template: trestles
+  image: emarsh.jpeg
+  image-width: 18em
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/notemmawolfarth
+    - icon: github
+      text: GitHub
+      href: https://github.com/emmarshall
+    - icon: envelope
+      text: Email
+      href: mailto:em.marshall47@gmail.com
+---
+
+::: {#hero-heading}
+
+Emma Marshall is a graduate student in the dual JD/Ph.D. Law-Psychology and Social Cognitive Program at the University of Nebraska-Lincoln in Dr. Eve Brank's [Law and Policy Lab](https://psychology.unl.edu/ebrank). 
+
+When not working on her dissertation, Emma enjoys unnecessarily complicated board-games, spending time with her dog [Fitz](https://ap-ls.org/resources/pets/posts/fitz/) and talking about herself in the third-person.
+
+------------------------------------------------------------------------
+
+## Education
+
+::: topbr
+<p class="custom-subtitle">
+
+{{< fa graduation-cap >}} JD with concentration in Constitutional Law, 2022
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Nebraska-Lincoln <br> Lincoln, NE
+
+</p>
+
+<p class="custom-subtitle">
+
+{{< fa graduation-cap >}} MA in Social-Cognitive Psychology, 2022
+
+</p>
+
+<p class="custom-subtitle2">
+
+University of Nebraska-Lincoln <br> Lincoln, NE
+
+</p>
+
+<p class="custom-subtitle">
+
+{{< fa graduation-cap >}} BA in Psychology, 2014
+
+</p>
+
+<p class="custom-subtitle2">
+
+Pomona College <br> Claremont, CA
+
+</p>
+:::
+
+:::
+
+```{=html}
+
+<!-- about -->
+<div class="corner-about">
+   <a class="bg_links social portfolio" href="../index.com" target="_blank">
+      <span class="icon"></span>
+   </a>
+   <a class="bg_links social linkedin" href="https://twitter.com/notemmawolfarth" target="_blank">
+      <span class="icon"></span>
+   </a>
+   <a class="bg_links logo"></a>
+</div>
+<!-- end about -->
+
+```

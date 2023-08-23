@@ -1,0 +1,55 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - "*.css"
+    - "*.pdf"
+
+website:
+  title: "emmarshall.com"
+  
+  favicon: "images/fitz.ico"
+  
+  search: false
+  
+  open-graph: 
+    site-name: Emma Marshall
+    description: "Emma Marshall's personal website for things and stuff"
+    image: "about/emarsh.png"
+    
+  navbar:
+    logo: "images/light-logo.svg"
+    title: false
+    background: primary
+    right:
+      - href: about/index.qmd
+        text: About Me
+      - href: posts/index.qmd
+        text: posts
+      - href: cv/em_cv.pdf
+        text: cv
+      - icon: envelope
+        href: mailto:em.marshall47@gmail.com
+      - icon: twitter
+        href: https://twitter.com/notemmawolfarth
+      - icon: github
+        href: https://github.com/emmarshall
+            
+  page-footer:
+    background: light
+    left: "© 2022 Emma Marshall"
+    center: "Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)"
+
+format:
+  html:
+    theme: 
+      - flatly
+      - assets/custom.scss
+    css: 
+      - index.css
+      - assets/academicons.css
+    toc: false
+
+execute: 
+  freeze: true   
+

@@ -1,0 +1,1064 @@
+/*-- scss:defaults --*/
+
+
+// use flatly as the base
+// https://github.com/thomaspark/bootswatch/tree/v5/dist/flatly
+
+$theme: "flatly" !default;
+
+
+// My colors
+
+$white:    #fff;
+$gray:     #adb5bd;
+$gray-100: #f8f9fa;
+$gray-200: #eee;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #aaa;
+$gray-600: #777;
+$gray-700: #495057;
+$gray-800: #333;
+$gray-900: #212529;
+$black:    #000;
+
+ 
+$blue:    #375a7f;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #eb6864;
+$red:     #e74c3c;
+$orange:  #fd7e14;
+$yellow:  #f5e625;
+$green:   #22b24c;
+$teal:    #20c997;
+$cyan:    #369;
+
+$primary:     $pink !default;
+$secondary:   $blue !default;
+
+// Links
+$link-color:    $primary !default;
+$link-hover-color: lighten($primary, 10%) !default;
+
+// main content
+$body-bg:  #fdfdfd !default;
+$body-color:  $gray-900 !default;
+$headings-color: $primary !default;
+$card-border-color:  $primary !default;
+$form-select-border-color: $primary !default; 
+
+// footer
+$footer-bg: $white;
+$footer-fg: $secondary;
+
+// fonts
+
+@font-face {
+    font-family: 'optiamadeussolid';
+    src: url('assets/fonts/optiamadeus-solid-webfont.woff2') format('woff2'),
+         url('assets/fonts/optiamadeus-solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Black";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Black";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-BlackItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Bold";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Bold";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "ExtraBold";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "ExtraBold";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-ExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "ExtraLight";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "ExtraLight";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-ExtraLightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Light";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Light";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Medium";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Medium";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Regular";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "Regular";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "SemiBold";
+  font-style: normal;
+  src: url("assets/fonts/Metropolis-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: "SemiBold";
+  font-style: italic;
+  src: url("assets/fonts/Metropolis-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Bold";
+  font-style: normal;
+  src: url("assets/fonts/MonoLisaemw-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Bold";
+  font-style: italic;
+  src: url("assets/fonts/MonoLisaemw-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Light";
+  font-style: normal;
+  src: url("assets/fonts/MonoLisaemw-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Light";
+  font-style: italic;
+  src: url("assets/fonts/MonoLisaemw-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Medium";
+  font-style: normal;
+  src: url("assets/fonts/MonoLisaemw-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Medium";
+  font-style: italic;
+  src: url("assets/fonts/MonoLisaemw-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Regular";
+  font-style: normal;
+  src: url("assets/fonts/MonoLisaemw-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "Regular";
+  font-style: italic;
+  src: url("assets/fonts/MonoLisaemw-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "SemiBold";
+  font-style: normal;
+  src: url("assets/fonts/MonoLisaemw-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "MonoLisaemw";
+  font-weight: "SemiBold";
+  font-style: italic;
+  src: url("assets/fonts/MonoLisaemw-SemiBoldItalic.woff") format("woff");
+}
+
+
+// fonts
+$font-family-sans-serif: "Metropolis", sans-serif !default;
+$font-family-mono: "MonoLisa", monospace !default;
+$headings-font-family: 'Source Serif Pro', sans-serif !default;
+$headings-font-weight: 600 !default;
+$font-family-sans-serif: 'Metropolis', sans-serif !default;
+$navbar-font-family: 'MonoLisa', monospace !default;
+$sidebar-font-family: 'MonoLisa', monospace !default;
+$toc-font-family: 'MonoLisa', monospace !default;
+$footer-font-family: 'MonoLisa', monospace !default;
+$callout-font-family: 'MonoLisa', monospace !default;
+
+// font sizes
+$font-size-base:   1rem !default; // Assumes the browser default, typically `16px`
+$h1-font-size:     $font-size-base * 3 !default;
+$h2-font-size:     $font-size-base * 2.5 !default;
+$h3-font-size:     $font-size-base * 2 !default;
+$h4-font-size:     $font-size-base * 1.5 !default;
+$h5-font-size:     $font-size-base * 1.3 !default;
+$h6-font-size:     $font-size-base * 1.1 !default;
+
+
+
+// theme colors
+$code-color: $secondary !default; //color for the font of inline code
+$code-block-border-color: $primary !default; //color for the border of blocks of code
+$btn-code-copy-color-active: $primary !default;
+
+// callouts
+$callout-color-note: $primary;
+$callout-color-tip: $secondary;
+$callout-color-caution: $orange;
+$callout-color-warning: $orange;
+$callout-color-important: $red;
+
+// nav bar
+$navbar-bg: $primary;
+$navbar-fg: $white;
+$navbar-hl: $gray-900;
+
+/*-- scss:rules --*/
+
+
+
+
+@media screen and (min-width: 56em) {
+  html {
+    font-size: 1.1em;
+  }
+}
+
+
+// code
+pre.sourceCode {
+  border-radius: 0;
+  border-left-color: $gray-300;
+}
+
+
+
+// navbar
+
+.navbar-brand > img {
+    max-height: 50px;
+}
+
+
+// navbar title
+.navbar-title {
+  font-size: $font-size-base * 1.75;
+}
+
+// hover on navbar
+
+.navbar-title:hover > .icon-line {
+  animation-duration: 600ms;
+  animation-name: line-expand;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.2rem;
+}
+    
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  color: $white;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  color: $yellow;
+}
+
+
+// then override colors 
+
+
+#navbarCollapse > ul > li:nth-child(1) > a:hover,
+#navbarCollapse > ul > li:nth-child(1) > a:hover {
+  color: $white;
+}
+  
+#navbarCollapse > ul > li:nth-child(2) > a:hover,
+#navbarCollapse > ul > li:nth-child(4) > a:hover {
+  color: $white;
+}
+
+#navbarCollapse > ul > li:nth-child(2) > a.nav-link.active,
+#navbarCollapse > ul > li:nth-child(4) > a.nav-link.active {
+  color: $white;
+}
+
+#navbarCollapse > ul > li:nth-child(3) > a:hover,
+#navbarCollapse > ul > li:nth-child(5) > a:hover {
+  color: $white;
+}
+
+#navbarCollapse > ul > li:nth-child(3) > a.nav-link.active,
+#navbarCollapse > ul > li:nth-child(5) > a.nav-link.active {
+  color: $white;
+}
+
+#navbarCollapse > ul > li:nth-child(4) > a:hover,
+#navbarCollapse > ul > li:nth-child(6) > a:hover {
+  color: $white;
+}
+
+#navbarCollapse > ul > li:nth-child(4) > a.nav-link.active,
+#navbarCollapse > ul > li:nth-child(6) > a.nav-link.active {
+  color: $white;
+}
+
+
+// animated underline on hover, when navbar shows as row
+@media screen and (min-width: 992px) {
+  a.nav-link {
+    position: relative;
+  }
+  
+  .navbar .navbar-nav .nav-item {
+    position: relative;
+  }
+  
+  .navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: $secondary;
+    width: 0%;
+    content: "";
+    height: 4px;
+    transition: all 0.3s;
+  }
+  
+  .navbar .navbar-nav .nav-item:nth-child(1)::after, 
+  .navbar .navbar-nav .nav-item:nth-child(1)::after {
+    background-color: $white;
+  }
+  
+  .navbar .navbar-nav .nav-item:nth-child(2)::after, 
+  .navbar .navbar-nav .nav-item:nth-child(4)::after {
+    background-color: $white;
+  }
+  
+  .navbar .navbar-nav .nav-item:nth-child(3)::after, 
+  .navbar .navbar-nav .nav-item:nth-child(5)::after {
+    background-color: $white;
+  }
+  
+  .navbar .navbar-nav .nav-item:nth-child(4)::after, 
+  .navbar .navbar-nav .nav-item:nth-child(6)::after {
+    background-color: $white;
+  }
+  
+  .navbar .navbar-nav .nav-item:hover::after {
+    width: 90%;
+  }
+}
+
+// nav footer
+
+.nav-footer {
+    align-items: flex-start;  // Align all flex items to the top
+    flex-wrap: wrap;
+    border: 0 !important;
+    min-height: 3rem;
+
+    a {
+        color: $primary;
+    }
+
+    .faux-block {
+        display: block;
+        padding-bottom: 0.4rem;
+    }
+
+    // In the default Quarto template, .nav-footer-center has position: absolute 
+    // turned on, which makes the div not be a flex item
+    // This changes that so that it *is* a flex item
+    .nav-footer-center {
+        text-align: center;
+        position: inherit;
+        margin-top: 0;
+
+        @media (max-width: map-get($grid-breakpoints, md)) {
+            margin-top: 0.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    // When the screen is medium or smaller, make each footer chunk be 100% width 
+    // and centered; otherwise make them be 33% width and left/right/centerd
+    .nav-footer-left,
+    .nav-footer-right,
+    .nav-footer-center {
+        text-align: center;
+        width: 100%;
+        min-height: 2em;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        .nav-footer-left {
+            text-align: left;
+        }
+
+        .nav-footer-right {
+            text-align: right;
+        }
+
+        .nav-footer-left,
+        .nav-footer-right,
+        .nav-footer-center {
+            flex: 1 1 33%;
+        }
+    }
+}
+
+.custom-subtitle {
+  font-size: 1.2rem;
+  font-family: 'metropolis';
+  margin-bottom: 0.15em;
+}
+
+.custom-subtitle2 {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-family: 'metropolis';
+}
+
+
+.topbr {
+    display: block;
+    margin-top: 1em;
+}
+
+.center {
+  text-align: center;
+  left: 50%;
+}
+
+
+// blocks of colored content 
+
+.content-block {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+.alt-background {
+  background-color: $secondary;
+  border-top: 1px solid $secondary;
+  border-bottom: 1px solid $secondary;
+}
+
+.simple-info {
+   text-align: center;
+   color: $primary;
+   padding-bottom: 2rem;
+}
+
+.simple-info h2 {
+   margin-top: 1rem;
+   color: $primary;
+   margin-bottom: 2rem;
+}
+.simple-info h3 {
+   margin-top: 1rem;
+   color: $primary;
+   margin-bottom: 2rem;
+}
+
+// dark-alternative
+
+.content-block-blue {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+.alt-background-blue {
+  background-color: $primary;
+  border-top: 1px solid $secondary;
+  border-bottom: 1px solid $secondary;
+}
+
+.simple-info-blue {
+   text-align: center;
+   color: $secondary;
+   padding-bottom: 2rem;
+}
+
+.simple-info-blue h2 {
+   margin-top: 1rem;
+   color: $secondary;
+   margin-bottom: 2rem;
+}
+.simple-info-blue h3 {
+   margin-top: 1rem;
+   color: $light;
+   margin-bottom: 2rem;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+// set primary buttons 
+
+.btn-action-primary {
+  color: $light;
+  background-color: $primary !important;
+}
+
+.btn-action-primary:hover {
+  color: $secondary;
+}
+
+.btn-action {
+  min-width: 165px;
+  border-radius: 30px;
+  border: none;
+}
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #ebf4fa;
+}
+.px-btn.theme {
+    background: $primary;
+    color: #ffffff;
+    border: 2px solid #fe4f6c;
+}
+.px-btn {
+    padding: 0 20px;
+    line-height: 42px;
+    border: 2px solid transparent;
+    position: relative;
+    display: inline-block;
+    background: none;
+    border: none;
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.px-btn.theme-t {
+    background: transparent;
+    border: 2px solid #fe4f6c;
+    color: $primary;
+}
+
+
+/* boxed feature grid */
+
+.feature-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+.feature-grid__item {
+    text-align: center;
+    padding: 30px;
+  }
+
+.feature-grid__icon {
+    padding-bottom: 15px;
+  }
+.feature-grid__link {
+    border-bottom: 0px;
+    text-decoration: none;
+  }
+
+.feature-grid__i {
+    font-size: 3.75rem;
+    color: $primary;
+
+    &:hover {
+      color: lighten($primary, 10%);
+    }
+  }
+}
+
+
+/* boxed feature grid */
+
+.bg-light {
+  background-color: $light !important;
+}
+.bg-breakout {
+  position: relative;
+  width: 100vw !important;
+  left: calc(-1 * (100vw - 100%) / 2);
+}
+
+.inner-container {
+  width: 100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.boxed-wrapper {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+
+.boxed-feature-grid {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.boxed-feature-grid__item {
+  width: 50%;
+  padding: 2rem 1rem;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  min-height: 8.375rem;
+  border-bottom: 0.0625rem solid #dee2e6;
+  border-right: 0.0625rem solid #dee2e6;
+}
+
+.boxed-feature-grid__item {
+  width: calc(100% / 5);
+  /* Adjust the width as necessary to display the desired number of items per row */
+}
+
+@media (max-width: 767px) {
+  .boxed-feature-grid__item {
+    width: calc(100% / 2);
+    /* Adjust the width as necessary for smaller screens */
+  }
+}
+
+
+
+.boxed-feature-grid__icon {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    i {
+    font-size: 3.75rem;
+    color: $primary;
+  }
+  
+  &:hover {
+    color: $white;
+  }
+}
+
+.boxed-feature-grid__title {
+      color: $primary;
+      margin-top: 1rem;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+.boxed-feature-grid__link {
+      border-bottom: 0px;
+      text-decoration: none;
+    }
+    
+// special hover-cards - credit to https://www.rafaelalucas.com
+
+.corner-about {
+   $cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
+   $transition: 0.6s $cubic;
+   $size: 40px;
+   position: fixed;
+   z-index: 10;
+   bottom: 10px;
+   right: 10px;
+   width: $size;
+   height: $size;
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   transition: all 0.2s ease;
+
+   .bg_links {
+      width: $size;
+      height: $size;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(#eb6864, 0.2);
+      border-radius: 100%;
+      backdrop-filter: blur(5px);
+      position: absolute;
+   }
+
+   .logo {
+      width: $size;
+      height: $size;
+      z-index: 9;
+      background-image: url(https://raw.githubusercontent.com/emmarshall/emmamarshall.com/main/images/icons/info.svg);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: 10px 7px;
+      opacity: 0.9;
+      transition: all 1s 0.2s ease;
+      bottom: 0;
+      right: 0;
+   }
+
+   .social {
+      opacity: 0;
+      right: 0;
+      bottom: 0;
+
+      .icon {
+         width: 100%;
+         height: 100%;
+         background-size: 20px;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-color: transparent;
+         display: flex;
+         transition: all 0.2s ease, background-color 0.4s ease;
+         opacity: 0;
+         border-radius: 100%;
+      }
+
+      &.portfolio {
+         transition: all 0.8s ease;
+
+         .icon {
+            background-image: url(https://raw.githubusercontent.com/emmarshall/emmamarshall.com/main/images/icons/presentation.svg);
+         }
+      }
+
+      &.dribbble {
+         transition: all 0.3s ease;
+         .icon {
+            background-image: url(https://raw.githubusercontent.com/emmarshall/emmamarshall.com/main/images/icons/about.svg);
+         }
+      }
+
+      &.linkedin {
+         transition: all 0.8s ease;
+         .icon {
+            background-image: url(https://raw.githubusercontent.com/emmarshall/emmamarshall.com/main/images/icons/info.svg);
+         }
+      }
+   }
+
+   &:hover {
+      width: 105px;
+      height: 105px;
+      transition: all $transition;
+
+      .logo {
+         opacity: 1;
+         transition: all 0.6s ease;
+      }
+
+      .social {
+         opacity: 1;
+
+         .icon {
+            opacity: 0.9;
+         }
+
+         &:hover {
+            background-size: 28px;
+            .icon {
+               background-size: 65%;
+               opacity: 1;
+            }
+         }
+
+         &.portfolio {
+            right: 0;
+            bottom: calc(100% - 40px);
+            transition: all 0.3s 0s $cubic;
+            .icon {
+               &:hover {
+                  background-color: #698fb7;
+               }
+            }
+         }
+
+         &.dribbble {
+            bottom: 45%;
+            right: 45%;
+            transition: all 0.3s 0.15s $cubic;
+            .icon {
+               &:hover {
+                  background-color: #ea4c89;
+               }
+            }
+         }
+
+         &.linkedin {
+            bottom: 0;
+            right: calc(100% - 40px);
+            transition: all 0.3s 0.25s $cubic;
+            .icon {
+               &:hover {
+                  background-color: #0077b5;
+               }
+            }
+         }
+      }
+   }
+}
+
+//Dark cards with icons from codepen cite source
+.dark-card-wrapper {
+   width: 100vw;
+   margin: 0 auto;
+   height: 400px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 767px) {
+   .dark-card-wrapper {
+      height: 700px;
+   }
+}
+
+.dark-card-grid-content {
+   max-width: 1024px;
+   width: 100%;
+   padding: 0 4%;
+   padding-top: 250px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+   .dark-card-grid-content {
+      padding-top: 300px;
+      flex-direction: column;
+   }
+}
+
+
+.card-content {
+   max-width: 1024px;
+   width: 100%;
+   padding: 0 4%;
+   padding-top: 250px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+   .card-content {
+      padding-top: 300px;
+      flex-direction: column;
+   }
+}
+
+.card {
+   width: 100%;
+   max-width: 300px;
+   min-width: 200px;
+   height: 250px;
+   background-color: #292929;
+   margin: 10px;
+   border-radius: 10px;
+   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+   border: 2px solid rgba(7, 7, 7, 0.12);
+   font-size: 16px;   
+   transition: all 0.3s ease;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.icon {
+   margin: 0 auto;
+   width: 100%;
+   height: 80px;
+   max-width:80px;
+   background: linear-gradient(90deg, #FF7E7E 0%, #FF4848 40%, rgba(0, 0, 0, 0.28) 60%);
+   border-radius: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   transition: all 0.8s ease;
+   background-position: 0px;
+   background-size: 200px;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.card .title {
+   width: 100%;
+   margin: 0;
+   text-align: center;
+   margin-top: 30px;
+   color: white;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 4px;
+}
+
+.card .text {
+   width: 80%;
+   margin: 0 auto;
+   font-size: 13px;
+   text-align: center;
+   margin-top: 20px;
+   color: white;
+   font-weight: 200;
+   letter-spacing: 2px;
+   opacity: 0;
+   max-height:0;
+   transition: all 0.3s ease;
+}
+
+.card:hover {
+   height: 270px;
+}
+
+.card:hover .info {
+   height: 90%;
+}
+
+.card:hover .text {
+   transition: all 0.3s ease;
+   opacity: 1;
+   max-height:40px;
+}
+
+.card:hover .icon {
+   background-position: -120px;
+   transition: all 0.3s ease;
+}
+
+.card:hover .icon i {
+   background: linear-gradient(90deg, #FF7E7E, #FF4848);
+   -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+   opacity: 1;
+   transition: all 0.3s ease;
+}
+
+
